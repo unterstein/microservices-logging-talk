@@ -1,7 +1,8 @@
 # Agenda
 
 - Motivation
-- The Elastic Stack
-- Cloud Solutions
-- Introduce Stack
-- Do some logging
+- The Elastic stack
+- Cloud solutions
+- Introduce stack
+- Do some tricks
+- Dashboards
