@@ -10,6 +10,6 @@ todo
 - Motivation
 - The Elastic stack
 - Cloud solutions
-- Introduce stack
+- Introduce ELK
 - Do some tricks
 - Dashboards
