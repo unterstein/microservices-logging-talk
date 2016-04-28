@@ -15,7 +15,7 @@ public class BaseTest {
    * remove the static modifier and replace the {@link ClassRule} annotation with {@link Rule}.
    */
   @ClassRule
-  public static AppRule app = new AppRule(new App());
+  public static AppRule app = new AppRule(new BasketService());
 
   /**
    * One client per test. It creates a new HTTP client per each of the test method you have.

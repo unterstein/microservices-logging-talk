@@ -21,7 +21,7 @@
     <jooby.version>1.0.0.CR2</jooby.version>
 
     <!-- Startup class -->
-    <application.class>info.unterstein.App</application.class>
+    <application.class>info.unterstein.BasketService</application.class>
   </properties>
 
   <dependencies>
