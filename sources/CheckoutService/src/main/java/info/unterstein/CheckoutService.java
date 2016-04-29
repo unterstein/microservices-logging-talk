@@ -8,7 +8,7 @@ import org.jooby.Jooby;
 public class CheckoutService extends Jooby {
 
   {
-    get("/", () -> "Hello World!");
+    get("/", () -> "Hi checkout!");
   }
 
   public static void main(final String[] args) throws Exception {

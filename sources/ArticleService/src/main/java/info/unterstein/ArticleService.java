@@ -8,7 +8,7 @@ import org.jooby.Jooby;
 public class ArticleService extends Jooby {
 
   {
-    get("/", () -> "Hello World!");
+    get("/", () -> "Hi articles!");
   }
 
   public static void main(final String[] args) throws Exception {
