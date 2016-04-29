@@ -1,0 +1,16 @@
+version: '2'
+services:
+  articleservice:
+    image: articleservice
+    ports:
+      - "8081:8081"
+
+  basketservice:
+    image: basketservice
+    ports:
+      - "8082:8082"
+
+  checkoutservice:
+    image: checkoutservice
+    ports:
+      - "8083:8083"
