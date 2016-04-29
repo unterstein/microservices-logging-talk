@@ -21,6 +21,6 @@ public class BaseTest {
    * One client per test. It creates a new HTTP client per each of the test method you have.
    */
   @Rule
-  public Client server = new Client("http://localhost:8080");
+  public Client server = new Client("http://localhost:8082");
 
 }
