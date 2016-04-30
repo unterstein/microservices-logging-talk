@@ -1,14 +1,6 @@
 version: '2'
 services:
 
-  elasticsearch:
-    image: unterstein/elasticsearch
-    ports:
-      - "9200:9200"
-      - "9300:9300"
-    depends_on:
-      - webservice
-
   webservice:
     image: unterstein/webservice
     ports:
@@ -17,18 +9,31 @@ services:
       - articleservice
       - basketservice
       - checkoutservice
+      - elasticsearch
 
   articleservice:
     image: unterstein/articleservice
     ports:
       - "8081:8081"
+    depends_on:
+      - elasticsearch
 
   basketservice:
     image: unterstein/basketservice
     ports:
       - "8082:8082"
+    depends_on:
+      - elasticsearch
 
   checkoutservice:
     image: unterstein/checkoutservice
     ports:
       - "8083:8083"
+    depends_on:
+      - elasticsearch
+
+  elasticsearch:
+    image: unterstein/elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
