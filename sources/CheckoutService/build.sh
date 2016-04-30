@@ -3,4 +3,4 @@
 cd $(dirname $0)
 
 mvn clean install
-docker build -t checkoutservice:latest .
+docker build -t unterstein/checkoutservice:latest .
