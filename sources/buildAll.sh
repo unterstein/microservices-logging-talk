@@ -2,8 +2,9 @@
 
 cd $(dirname $0)
 
-./ArticleService/build.sh
-./BasketService/build.sh
-./CheckoutService/build.sh
+./ServicesBaseImage/build.sh
+
+./buildServices.sh
+
 ./WebService/build.sh
 ./ElasticSearch/build.sh
