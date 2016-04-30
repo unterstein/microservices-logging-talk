@@ -1,5 +1,14 @@
 version: '2'
 services:
+
+  elasticsearch:
+    image: unterstein/elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    depends_on:
+      - webservice
+
   webservice:
     image: unterstein/webservice
     ports:
