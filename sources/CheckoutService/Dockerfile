@@ -1,4 +1,4 @@
-FROM java:8-jre
+FROM microservicetalk/servicebase
 MAINTAINER Johannes Unterstein <unterstein@me.com>
 
 EXPOSE 8081
