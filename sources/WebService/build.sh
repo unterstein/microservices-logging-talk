@@ -2,4 +2,4 @@
 
 cd $(dirname $0)
 
-docker build -t unterstein/webservice:latest .
+docker build -t microservicelogging/webservice:latest .

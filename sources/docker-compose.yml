@@ -2,7 +2,7 @@ version: '2'
 services:
 
   webservice:
-    image: unterstein/webservice
+    image: microservicelogging/webservice
     ports:
       - "8080:80"
     depends_on:
@@ -12,28 +12,28 @@ services:
       - elasticsearch
 
   articleservice:
-    image: unterstein/articleservice
+    image: microservicelogging/articleservice
     ports:
       - "8081:8081"
     depends_on:
       - elasticsearch
 
   basketservice:
-    image: unterstein/basketservice
+    image: microservicelogging/basketservice
     ports:
       - "8082:8082"
     depends_on:
       - elasticsearch
 
   checkoutservice:
-    image: unterstein/checkoutservice
+    image: microservicelogging/checkoutservice
     ports:
       - "8083:8083"
     depends_on:
       - elasticsearch
 
   elasticsearch:
-    image: unterstein/elasticsearch
+    image: microservicelogging/elasticsearch
     ports:
       - "9200:9200"
       - "9300:9300"

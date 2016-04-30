@@ -3,4 +3,4 @@
 cd $(dirname $0)
 
 mvn clean install
-docker build -t unterstein/basketservice:latest .
+docker build -t microservicelogging/basketservice:latest .

@@ -2,5 +2,5 @@
 
 cd $(dirname $0)
 
-docker build -t unterstein/elasticsearch:latest .
+docker build -t microservicelogging/elasticsearch:latest .
 
