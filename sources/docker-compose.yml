@@ -1,5 +1,14 @@
 version: '2'
 services:
+  webservice:
+    image: webservice
+    ports:
+      - "8080:80"
+    depends_on:
+      - articleservice
+      - basketservice
+      - checkoutservice
+
   articleservice:
     image: articleservice
     ports:
@@ -14,12 +23,3 @@ services:
     image: checkoutservice
     ports:
       - "8083:8083"
-
-webservice:
-    image: webservice
-    ports:
-      - "8080:80"
-    depends_on:
-      - articleservice
-      - basketservice
-      - checkoutservice
