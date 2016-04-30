@@ -16,3 +16,7 @@ cd CheckoutService
 mvn clean install
 docker build -t checkoutservice:latest .
 cd ..
+
+cd WebService
+docker build -t webservice:latest .
+cd ..
