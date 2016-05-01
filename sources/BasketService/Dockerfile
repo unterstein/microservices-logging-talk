@@ -6,4 +6,5 @@ RUN mkdir /app && \
 	rm /opt/logstash/conf.d/nginx.conf
 
 ADD target/BasketService-1.0-SNAPSHOT.jar /app/
-CMD java -jar /app/BasketService-1.0-SNAPSHOT.jar
+ADD run.sh /root/run.sh
+CMD /root/run.sh

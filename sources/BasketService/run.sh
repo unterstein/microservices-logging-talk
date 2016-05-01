@@ -2,4 +2,4 @@
 
 screen -S logstash -d -m /root/logstash.sh
 
-nginx -g "daemon off;"
+java -jar /app/BasketService-1.0-SNAPSHOT.jar
