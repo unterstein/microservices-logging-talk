@@ -2,9 +2,9 @@
 
 cd $(dirname $0)
 
-./ServicesBaseImage/build.sh
+./ServiceBaseImage/build.sh
 
 ./buildServices.sh
 
-./WebService/build.sh
+./Kibana/build.sh
 ./ElasticSearch/build.sh
