@@ -3,7 +3,6 @@ package info.unterstein;
 import org.jooby.Jooby;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.slf4j.MDC;
 
 /**
  * @author jooby generator
@@ -13,11 +12,18 @@ public class ArticleService extends Jooby {
   private static final Logger log = LoggerFactory.getLogger(ArticleService.class);
 
   {
+    before((req, rsp) -> {
+      ServiceCommons.beforeRequest(req);
+    });
+
     get("/", (req, rsp) -> {
-      MDC.put("requestId", "" + req.header("X-Request-Id"));
       log.info("Hi articles!");
       rsp.send("Hi articles!");
-      MDC.clear();
+    });
+
+    after((req, rsp, result) -> {
+      ServiceCommons.afterRequest(req);
+      return result;
     });
   }
 

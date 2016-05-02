@@ -25,6 +25,12 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>info.unterstein</groupId>
+      <artifactId>ServiceCommons</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
     <!-- Jooby -->
     <dependency>
       <groupId>org.jooby</groupId>
