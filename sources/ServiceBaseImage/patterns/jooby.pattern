@@ -1,0 +1,1 @@
+JOOBY \[%{HTTPDATE:timestamp}\]-\[%{WORD:thread}\]-\[%{WORD:requestId}\]-\[%{WORD:level}\]-\[%{WORD:logger}\] %{WORD:msg}
