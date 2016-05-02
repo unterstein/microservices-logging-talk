@@ -5,11 +5,7 @@ Logging mit Elasticsearch im Zeitalter von Microservices Die meisten von uns wer
 ## English
 todo
 
-# Agenda
+# Talk
 
-- Motivation
-- The Elastic stack
-- Cloud solutions
-- Introduce ELK
-- Do some tricks
-- Dashboards
+To see the presentation, just open the pdf file in the presentation folder or go to https://speakerdeck.com/unterstein
+
