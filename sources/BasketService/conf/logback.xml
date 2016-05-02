@@ -2,7 +2,7 @@
 <configuration scan="true" scanPeriod="15 seconds" debug="false">
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
-      <pattern>[%d{ISO8601}]-[%thread]-[%X{requestId}]-[%-5level]-[%logger]-[%msg]%n</pattern>
+      <pattern>[%d{ISO8601}]-[%thread]-[%X{requestId}]-[%X{sessionId}]-[%-5level]-[%logger]-[%msg]%n</pattern>
     </encoder>
   </appender>
 
@@ -10,7 +10,7 @@
     <file>${user.home}/service.log</file>
     <append>true</append>
     <encoder>
-      <pattern>[%d{ISO8601}]-[%thread]-[%X{requestId}]-[%-5level]-[%logger]-[%msg]%n</pattern>
+      <pattern>[%d{ISO8601}]-[%thread]-[%X{requestId}]-[%X{sessionId}]-[%-5level]-[%logger]-[%msg]%n</pattern>
     </encoder>
   </appender>
 

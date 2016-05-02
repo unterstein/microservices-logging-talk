@@ -1,2 +1,2 @@
 # use debugger on http://grokdebug.herokuapp.com/
-JOOBY \[%{DATA:timestamp}\]-\[%{DATA:thread}\]-\[%{NOTSPACE:requestId}\]-\[%{DATA:level}\ ]-\[%{DATA:logger}\]-\[%{DATA:msg}\]
+JOOBY \[%{DATA:timestamp}\]-\[%{DATA:thread}\]-\[%{NOTSPACE:requestId}\]-\[%{NOTSPACE:sessionId}\]-\[%{DATA:level}\ ]-\[%{DATA:logger}\]-\[%{DATA:msg}\]

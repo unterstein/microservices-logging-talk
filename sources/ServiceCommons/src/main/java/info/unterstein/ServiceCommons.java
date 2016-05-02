@@ -7,6 +7,7 @@ public class ServiceCommons {
 
   public static void beforeRequest(Request req) {
     MDC.put("requestId", ("" + req.header("X-Request-Id")).replace("[", "").replace("]",""));
+    MDC.put("sessionId", ("" + req.header("X-Session-Id")).replace("[", "").replace("]",""));
   }
 
   public static void afterRequest(Request req) {
