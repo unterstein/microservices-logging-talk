@@ -9,3 +9,21 @@ todo
 
 To see the presentation, just open the pdf file in the presentation folder or go to https://speakerdeck.com/unterstein
 
+# What is in this demo?
+- Three services, bundled together with docker-compose
+- A web app consuming this services
+- One elasticsearch installation
+- One kibana installation, consuming the elasticsearch api
+
+The log files of the three services and the web app are synchronized to elasticsearch
+
+
+# Get this demo working
+- You need java, docker and docker-compose to be installed on your machine.
+- Go to sources and run this command
+
+```
+./buildAll.sh && ./run.sh
+```
+
+- Point a browser of your choice to your docker ip on port ```8080``` to view the web app or port ```5601``` to view kibana
