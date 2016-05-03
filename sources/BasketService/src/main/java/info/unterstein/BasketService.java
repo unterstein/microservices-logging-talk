@@ -27,6 +27,12 @@ public class BasketService extends Jooby {
       ServiceCommons.beforeRequest(req);
     });
 
+    get("/", (req, rsp) -> {
+      String sessionId = ServiceCommons.getSessionId(req);
+      Basket basket = baskets.get(sessionId);
+      rsp.send(basket == null ? new Basket() : basket);
+    }).produces(MediaType.json);
+
     post("/", (req, rsp) -> {
       String sessionId = ServiceCommons.getSessionId(req);
       Basket basket = req.body().to(Basket.class);
