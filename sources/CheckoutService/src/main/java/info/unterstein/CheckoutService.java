@@ -59,7 +59,7 @@ public class CheckoutService extends Jooby {
         // TODO error/transaction handling
       }
 
-      log.info("Successful checkout: " + req.require(Gson.class).toJson(checkout));
+      log.info("Successful checkout: " + gson.toJson(checkout) + " for articles: " + gson.toJson(checkoutBasket));
       // do something with the checkout
 
       rsp.send(ServerAnswer.ok());
