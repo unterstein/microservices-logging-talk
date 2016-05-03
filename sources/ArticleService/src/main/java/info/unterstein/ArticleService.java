@@ -1,8 +1,9 @@
 package info.unterstein;
 
-import com.google.gson.Gson;
 import info.unterstein.model.Article;
 import org.jooby.Jooby;
+import org.jooby.MediaType;
+import org.jooby.json.Gzon;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,24 +19,24 @@ public class ArticleService extends Jooby {
 
   private Map<Long, Article> articles = initialData();
 
-  private Gson gson = new Gson();
-
   {
+    use(new Gzon());
+
     before((req, rsp) -> {
       ServiceCommons.beforeRequest(req);
     });
 
     get("/", (req, rsp) -> {
       rsp.send("{\"status\"=\"ok\"}");
-    }).produces("json");
+    }).produces(MediaType.json);
 
     get("/articles", (req, rsp) -> {
-      rsp.send(gson.toJson(articles.values()));
-    }).produces("json");
+      rsp.send(articles.values());
+    }).produces(MediaType.json);
 
     get("/articles/:id", (req, rsp) -> {
-      rsp.send(gson.toJson(articles.get(req.param("id").longValue())));
-    }).produces("json");
+      rsp.send(articles.get(req.param("id").longValue()));
+    }).produces(MediaType.json);
 
     after((req, rsp, result) -> {
       ServiceCommons.afterRequest(req);

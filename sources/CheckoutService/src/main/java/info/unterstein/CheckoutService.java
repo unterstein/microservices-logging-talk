@@ -1,6 +1,8 @@
 package info.unterstein;
 
 import org.jooby.Jooby;
+import org.jooby.MediaType;
+import org.jooby.json.Gzon;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +14,8 @@ public class CheckoutService extends Jooby {
   private static final Logger log = LoggerFactory.getLogger(CheckoutService.class);
 
   {
+    use(new Gzon());
+
     before((req, rsp) -> {
       ServiceCommons.beforeRequest(req);
     });
@@ -19,7 +23,7 @@ public class CheckoutService extends Jooby {
     get("/", (req, rsp) -> {
       log.info("Hi checkout!");
       rsp.send("Hi checkout!");
-    });
+    }).produces(MediaType.json);
 
     after((req, rsp, result) -> {
       ServiceCommons.afterRequest(req);

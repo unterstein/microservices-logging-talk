@@ -11,7 +11,7 @@ public class AppTest extends BaseTest {
   public void index() throws Exception {
     server.get("/basketservice")
         .expect(200)
-        .header("Content-Type", "text/html;charset=UTF-8");
+        .header("Content-Type", "application/json;charset=UTF-8");
   }
 
 }
