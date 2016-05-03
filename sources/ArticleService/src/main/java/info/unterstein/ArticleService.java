@@ -27,14 +27,10 @@ public class ArticleService extends Jooby {
     });
 
     get("/", (req, rsp) -> {
-      rsp.send("{\"status\"=\"ok\"}");
-    }).produces(MediaType.json);
-
-    get("/articles", (req, rsp) -> {
       rsp.send(articles.values());
     }).produces(MediaType.json);
 
-    get("/articles/:id", (req, rsp) -> {
+    get("/:id", (req, rsp) -> {
       rsp.send(articles.get(req.param("id").longValue()));
     }).produces(MediaType.json);
 
