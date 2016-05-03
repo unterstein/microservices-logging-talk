@@ -1,6 +1,7 @@
 package info.unterstein;
 
 import info.unterstein.model.Article;
+import info.unterstein.model.ArticleCheckout;
 import info.unterstein.model.Articles;
 import org.jooby.Jooby;
 import org.jooby.MediaType;
@@ -33,6 +34,18 @@ public class ArticleService extends Jooby {
 
     get("/:id", (req, rsp) -> {
       rsp.send(articles.get(req.param("id").longValue()));
+    }).produces(MediaType.json);
+
+    post("/checkout/:id", (req, rsp) -> {
+      ArticleCheckout articleCheckout = req.body().to(ArticleCheckout.class);
+      Article article = articles.get(articleCheckout.id);
+
+      if (article != null && article.inStock >= articleCheckout.quantity) {
+        article.inStock -= articleCheckout.quantity;
+        rsp.send(ServerAnswer.ok());
+      } else {
+        rsp.send(ServerAnswer.failure());
+      }
     }).produces(MediaType.json);
 
     after((req, rsp, result) -> {
