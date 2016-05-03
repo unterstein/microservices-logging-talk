@@ -5,7 +5,5 @@ package info.unterstein.model;
  */
 public class ArticleCheckout {
   public Long id;
-  public String name;
-  public Double price;
   public Integer quantity;
 }
