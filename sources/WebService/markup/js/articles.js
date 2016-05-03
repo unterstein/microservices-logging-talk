@@ -17,7 +17,7 @@ $(function() {
         data: JSON.stringify(article),
         contentType: 'json',
         success: function(result) {
-            alert("success?");
+            alert("added");
         }
       });
     });
