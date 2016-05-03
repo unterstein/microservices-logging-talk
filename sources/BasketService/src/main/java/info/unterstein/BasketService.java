@@ -60,6 +60,7 @@ public class BasketService extends Jooby {
 
     delete("/", (req, rsp) -> {
       String sessionId = ServiceCommons.getSessionId(req);
+      log.info(sessionId);
       rsp.send(baskets.remove(sessionId));
     }).produces(MediaType.json);
 

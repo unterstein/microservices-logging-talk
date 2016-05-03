@@ -44,16 +44,19 @@ public class CheckoutService extends Jooby {
 
       // get basket and remove this one
       HttpDelete delete = new HttpDelete("http://basketservice:8082/basket/");
+      delete.setHeader("X-Session-Id", ServiceCommons.getSessionId(req));
       CloseableHttpResponse deleteResponse = client.execute(delete);
       CheckoutBasket checkoutBasket = gson.fromJson(new InputStreamReader(deleteResponse.getEntity().getContent()), CheckoutBasket.class);
 
       // change quantity of articles from stock
       for (CheckoutArticle article : checkoutBasket.articles) {
         HttpPost post = new HttpPost("http://articleservice:8081/articles/checkout/" + article.id);
-        post.setHeader("X-Request-Id", ServiceCommons.getRequestId(req)); // session id will be added automatically
+        post.setHeader("X-Request-Id", ServiceCommons.getRequestId(req));
+        post.setHeader("X-Session-Id", ServiceCommons.getSessionId(req));
+        post.setHeader("Content-Type", "application/json");
         post.setEntity(new StringEntity(gson.toJson(article)));
         client.execute(post);
-        // TODO transaction handling
+        // TODO error/transaction handling
       }
 
       log.info("Successful checkout: " + req.require(Gson.class).toJson(checkout));
