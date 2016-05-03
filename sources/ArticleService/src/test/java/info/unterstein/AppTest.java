@@ -9,7 +9,7 @@ public class AppTest extends BaseTest {
 
   @Test
   public void index() throws Exception {
-    server.get("/articleservice")
+    server.get("/articles")
         .expect(200)
         .header("Content-Type", "application/json;charset=UTF-8");
   }
