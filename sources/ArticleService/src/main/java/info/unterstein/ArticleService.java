@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author jooby generator
+ * @author Johannes Unterstein (unterstein@me.com)
  */
 public class ArticleService extends Jooby {
 

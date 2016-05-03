@@ -1,5 +1,8 @@
 package info.unterstein.model;
 
+/**
+ * @author Johannes Unterstein (unterstein@me.com)
+ */
 public class Article {
   public Long id;
   public String name;
