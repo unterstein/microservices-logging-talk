@@ -51,7 +51,7 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody data-bind="foreach: articles">
@@ -60,7 +60,7 @@
                     <td data-bind="text: price"></td>
                     <td data-bind="text: quantity"></td>
                     <td>
-                      <a class="btn btn-primary remove-article" data-bind="attr: {'data-id': id}">
+                      <a class="btn btn-default remove-article" data-bind="attr: {'data-id': id}">
                         Delete from basket
                       </a>
                     </td>
@@ -70,6 +70,8 @@
             </div>
           </div>
         </div>
+        Sum: <span class="sum"></span>
+        <a href="checkout.html" class="btn btn-info pull-right btn-lg">Checkout</a>
       </div>
 
     </div><!-- /.container -->
