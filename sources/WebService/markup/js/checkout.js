@@ -4,9 +4,9 @@ $(function() {
     ko.applyBindings(viewModel);
 
     var sum = 0;
-    data.articles.each(function() {
-      sum += price * quantity;
+    $(data.articles).each(function() {
+      sum += this.price * this.quantity;
     });
-    $(".sum").val(sum);
+    $(".sum").text(sum);
   });
 });

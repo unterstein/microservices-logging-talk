@@ -5,9 +5,9 @@ $(function() {
 
     var sum = 0;
     $(data.articles).each(function() {
-      sum += price * quantity;
+      sum += this.price * this.quantity;
     });
-    $(".sum").val(sum);
+    $(".sum").text(sum);
 
     $(".remove-article").click(function(e) {
       var that = this;
