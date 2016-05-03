@@ -4,8 +4,8 @@ $(function() {
     ko.applyBindings(viewModel);
 
     var sum = 0;
-    $(".price").each(function() {
-      sum += $(this).data("price").val();
+    $(data.articles).each(function() {
+      sum += price * quantity;
     });
     $(".sum").val(sum);
 
