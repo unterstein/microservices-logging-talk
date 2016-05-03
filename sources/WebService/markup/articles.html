@@ -43,7 +43,34 @@
 
       <div class="starter-template">
         <h1>Microservice Onlineshop - Articles</h1>
-        
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-12">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>In stock</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody data-bind="foreach: articles">
+                  <tr class="columns">
+                    <td data-bind="text: name"></td>
+                    <td data-bind="text: price"></td>
+                    <td data-bind="text: inStock"></td>
+                    <td>
+                      <a class="btn btn-primary add-article" data-bind="attr: {'data-id': id, 'data-name': name, 'data-price': price}">
+                        Add to basket
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div><!-- /.container -->
@@ -51,6 +78,6 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/knockout.min.js"></script>
     <script src="./js/knockout-mapping.min.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="./js/articles.js"></script>
   </body>
 </html>
