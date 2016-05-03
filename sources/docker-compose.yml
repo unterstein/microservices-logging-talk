@@ -11,6 +11,15 @@ services:
       - checkoutservice
       - elasticsearch
 
+  checkoutservice:
+    image: microservicelogging/checkoutservice
+    ports:
+      - "8083:8083"
+    depends_on:
+      - articleservice
+      - basketservice
+      - elasticsearch
+
   articleservice:
     image: microservicelogging/articleservice
     ports:
@@ -22,13 +31,6 @@ services:
     image: microservicelogging/basketservice
     ports:
       - "8082:8082"
-    depends_on:
-      - elasticsearch
-
-  checkoutservice:
-    image: microservicelogging/checkoutservice
-    ports:
-      - "8083:8083"
     depends_on:
       - elasticsearch
 
