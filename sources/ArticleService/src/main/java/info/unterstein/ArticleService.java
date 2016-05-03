@@ -1,6 +1,7 @@
 package info.unterstein;
 
 import info.unterstein.model.Article;
+import info.unterstein.model.Articles;
 import org.jooby.Jooby;
 import org.jooby.MediaType;
 import org.jooby.json.Gzon;
@@ -27,7 +28,7 @@ public class ArticleService extends Jooby {
     });
 
     get("/", (req, rsp) -> {
-      rsp.send(articles.values());
+      rsp.send(new Articles(articles.values()));
     }).produces(MediaType.json);
 
     get("/:id", (req, rsp) -> {
