@@ -9,4 +9,16 @@ $(function() {
     });
     $(".sum").text(sum);
   });
+  $(".submit").click(function(e) {
+    var customer = {
+      firstname: $("#firstname").val(),
+      name: $("#name").val(),
+      street: $("#street").val(),
+      zip: $("#zip").val(),
+      city: $("#city").val()
+    };
+    $.post("/checkout/", customer, function(e) {
+      window.location.href = "/index.html";
+    });
+  });
 });

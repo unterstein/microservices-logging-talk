@@ -1,15 +1,23 @@
 package info.unterstein.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author Johannes Unterstein (unterstein@me.com)
  */
 public class Checkout {
 
-  public CheckoutCustomer customer;
+  public String firstname;
+  public String name;
 
-  public List<CheckoutArticle> articles = new ArrayList<>();
+  public String street;
+  public String zip;
+  public String city;
+
+  public Checkout(String firstname, String name, String street, String zip, String city) {
+    this.firstname = firstname;
+    this.name = name;
+    this.street = street;
+    this.zip = zip;
+    this.city = city;
+  }
 
 }
