@@ -27,3 +27,13 @@ The log files of the three services and the web app are synchronized to elastics
 ```
 
 - Point a browser of your choice to your docker ip on port ```8080``` for http to view the web app or port ```5601``` for http to view kibana. Before using kibana it would be good to generate some log files, using the web app :-)
+
+# kibana-exported.json
+Like described in the talk, I used ```elasticdump``` to export kibana dashboard and visualization. In the file ```kibana-exported.json``` the example sales dashboard is exported. I used the following command to export this dashboard:
+
+```
+elasticdump --input=http://localdock:9200/.kibana --output=$ --type=data  > kibana-exported.json
+```
+
+Previously I installed ```elasticdump``` using ```npm install -g elasticdump```
+
