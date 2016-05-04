@@ -47,7 +47,6 @@ public class BasketService extends Jooby {
     put("/", (req, rsp) -> {
       String sessionId = ServiceCommons.getSessionId(req);
       BasketArticle article = req.body().to(BasketArticle.class);
-      // TODO do validation .. price etc.
 
       Basket basket = baskets.get(sessionId);
       if (basket == null) {
