@@ -35,14 +35,14 @@ services:
       - elasticsearch
 
   kibana:
-    image: microservicelogging/kibana
+    image: kibana:5
     ports:
       - "5601:5601"
     environment:
       - ELASTICSEARCH_URL=http://elasticsearch:9200
 
   elasticsearch:
-    image: microservicelogging/elasticsearch
+    image: elasticsearch:5
     volumes:
       - /usr/share/elasticsearch/data
     ports:
