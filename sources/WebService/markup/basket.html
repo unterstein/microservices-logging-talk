@@ -56,8 +56,8 @@
                 </thead>
                 <tbody data-bind="foreach: articles">
                   <tr class="columns">
-                    <td data-bind="attr: {'data-id': id}, text: name"></td>
-                    <td data-bind="attr: {'data-id': id}, text: price"></td>
+                    <td data-bind="text: name"></td>
+                    <td data-bind="text: price"></td>
                     <td data-bind="text: quantity"></td>
                     <td>
                       <a class="btn btn-default remove-article" data-bind="attr: {'data-id': id}">
