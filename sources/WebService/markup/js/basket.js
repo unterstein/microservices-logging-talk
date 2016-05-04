@@ -15,7 +15,7 @@ $(function() {
       };
     });
     ko.applyBindings(ko.mapping.fromJS({articles: enrichtedArticles, sum: ko.pureComputed(function() {
-      return enrichtedArticles.reduce(function(sum, currentArticle) { return sum + currentArticle.price();}, 0);
+      return enrichtedArticles.reduce(function(sum, currentArticle) { return sum + currentArticle.quantity() * currentArticle.price();}, 0);
     })}));
 
     $(".remove-article").click(function(e) {

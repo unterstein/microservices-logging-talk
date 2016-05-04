@@ -14,10 +14,9 @@ $(function() {
         price: articlePrice
       };
     });
-    var viewModel = ko.mapping.fromJS({articles: enrichtedArticles, sum: ko.pureComputed(function() {
-      return enrichtedArticles.reduce(function(sum, currentArticle) { return sum + currentArticle.price();}, 0);
-    })});
-    ko.applyBindings(viewModel);
+    ko.applyBindings(ko.mapping.fromJS({articles: enrichtedArticles, sum: ko.pureComputed(function() {
+      return enrichtedArticles.reduce(function(sum, currentArticle) { return sum + currentArticle.quantity() * currentArticle.price();}, 0);
+    })}));
   });
   $(".submit").click(function(e) {
     var customer = {
