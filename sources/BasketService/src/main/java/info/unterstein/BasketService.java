@@ -56,6 +56,7 @@ public class BasketService extends Jooby {
       }
 
       basket.addArticle(article);
+      log.info("Article " + article.id + " was added to basket");
 
       rsp.send(ServerAnswer.ok());
     }).produces(MediaType.json);
