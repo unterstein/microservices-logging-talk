@@ -44,7 +44,7 @@ services:
   elasticsearch:
     image: microservicelogging/elasticsearch
     volumes:
-      - "/home/elasticsearch/data:/usr/share/elasticsearch/data"
+      - /usr/share/elasticsearch/data
     ports:
       - "9200:9200"
       - "9300:9300"
