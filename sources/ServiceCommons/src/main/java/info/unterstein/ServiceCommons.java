@@ -15,7 +15,7 @@ public class ServiceCommons {
   public static void beforeRequest(Request request) {
     MDC.put("requestId", getRequestId(request));
     MDC.put("sessionId", getSessionId(request));
-    log.info("Service called for request " + request);
+    log.info("Service called for request: " + request.method() + " " + request.contextPath() + " " + request.headers());
   }
 
   public static String getRequestId(Request request) {
