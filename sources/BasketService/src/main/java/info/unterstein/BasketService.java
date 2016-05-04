@@ -39,6 +39,8 @@ public class BasketService extends Jooby {
       // ignore if basket already exists
       baskets.put(sessionId, basket);
 
+      log.info("Basket was created");
+
       rsp.send(ServerAnswer.ok());
     }).produces(MediaType.json);
 
@@ -60,7 +62,9 @@ public class BasketService extends Jooby {
 
     delete("/", (req, rsp) -> {
       String sessionId = ServiceCommons.getSessionId(req);
-      log.info(sessionId);
+
+      log.info("Basket was deleted");
+
       rsp.send(baskets.remove(sessionId));
     }).produces(MediaType.json);
 
@@ -69,7 +73,9 @@ public class BasketService extends Jooby {
 
       Basket basket = baskets.get(sessionId);
       if (basket != null) {
-        basket.removeArticle(req.param("id").longValue());
+        Long articleId = req.param("id").longValue();
+        basket.removeArticle(articleId);
+        log.info("Article was deleted from basket: " + articleId);
       }
 
       rsp.send(ServerAnswer.ok());
