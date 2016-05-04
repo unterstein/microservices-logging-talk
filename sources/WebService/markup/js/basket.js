@@ -14,14 +14,10 @@ $(function() {
         price: articlePrice
       };
     });
-    var viewModel = ko.mapping.fromJS({articles: enrichtedArticles});
+    var viewModel = ko.mapping.fromJS({articles: enrichtedArticles, sum: ko.pureComputed(function() {
+      return enrichtedArticles.reduce(function(sum, currentArticle) { return sum + currentArticle.price();}, 0);
+    })});
     ko.applyBindings(viewModel);
-
-    var sum = 0;
-    $(data.articles).each(function() {
-      sum += this.price * this.quantity;
-    });
-    $(".sum").text(sum);
 
     $(".remove-article").click(function(e) {
       var that = this;
