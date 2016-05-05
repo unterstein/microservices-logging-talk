@@ -1,13 +1,16 @@
 # Abstract
 ## Deutsch
-Logging mit Elasticsearch im Zeitalter von Microservices Die meisten von uns werden an einer Software arbeiten, welches auf mehrere Services, Systeme und/oder Server bzw. Rechenzentren verteilt ist. In verteilten Systemen fallen naturgemäß auch verteilte Logs an, welche aber am Besten über eine API durchsuchbar und monitorbar sein sollten. Der Stack mit Elasticsearch, Logstash und Kibana (ELK) ist üblich um diese Problematik zu adressieren und bietet eine wunderbare Basis für unsere Infrastruktur. In dieser Session wird exemplarisch gezeigt wie man ELK in seine bestehende Service-Architektur integrieren kann um den bestmöglichen Einblick in seine Anwendung zu erhalten. Dabei werden Logs aus verschiedenen Anwendungen nach Elastic schreiben und mit kleinen Tricks service-übergreifende Semantik und Nachvollziehbarkeit erreicht. Dabei werden wir sehen, wie uns Dashboards für verschiedene Stakeholder (Sales, Marketing, Ops, Devs, ..) quasi geschenkt werden. Und das coolste dabei: Unsere bestehende Services werden gar nicht viel davon mitbekommen :-)
+Die meisten von uns werden an einer Software arbeiten, welches auf mehrere Services, Systeme und/oder Server bzw. Rechenzentren verteilt ist. In verteilten Systemen fallen naturgemäß auch verteilte Logs an, welche aber am Besten über eine API durchsuchbar und monitorbar sein sollten. Der Stack mit Elasticsearch, Logstash und Kibana (ELK) ist üblich um diese Problematik zu adressieren und bietet eine wunderbare Basis für unsere Infrastruktur.
+
+In dieser Session wird exemplarisch gezeigt wie man ELK in seine bestehende Service-Architektur integrieren kann um den bestmöglichen Einblick in seine Anwendung zu erhalten. Dabei werden Logs aus verschiedenen Anwendungen nach Elastic schreiben und mit kleinen Tricks service-übergreifende Semantik und Nachvollziehbarkeit erreicht. Dabei werden wir sehen, wie uns Dashboards für verschiedene Stakeholder (Sales, Marketing, Ops, Devs, ..) quasi geschenkt werden. Und das coolste dabei: Unsere bestehende Services werden gar nicht viel davon mitbekommen :-)
+
 
 ## English
-todo
+Most of us build software, which is distributed on multiple services, systems or datacenters. Distributed systems produce distributed log files, but actually we need a centralized API to monitor and search this log files. The stack with elasticsearch, logstash and kibana (ELK) is well accepted to solve these issues and offers good starting point for our architecture.We demo in this session how to integrate the ELK stack to your existing service architecture to achieve the best monitoring experience of your application. We will sync different kinds of logs to elasticsearch and show some tricks how to enable service comprehensive semantics and traceability. Additionally we show how to build dashboards for different stakeholders (Sales, Marketing, Ops, Devs, …). But the best part of it: Our services will not recognize the new logging infrastructure :-)
 
 # Talk
 
-To see the presentation, just open the pdf file in the presentation folder or go to https://speakerdeck.com/unterstein
+To see the presentation, just open the pdf file in the presentation folder or go to https://speakerdeck.com/unterstein/logging-in-the-era-of-microservices
 
 # What is in this demo?
 - Three services, bundled together with docker-compose

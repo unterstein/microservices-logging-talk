@@ -2,5 +2,4 @@ target
 .idea
 *.iml
 ${user.home}
-presentation
 service.log
