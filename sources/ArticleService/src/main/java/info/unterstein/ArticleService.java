@@ -66,6 +66,8 @@ public class ArticleService extends Jooby {
     result.put(4L, new Article(4L, "Eschweger", 1.10, 100));
     result.put(5L, new Article(5L, "Störtebecker", 1.50, 100));
     result.put(6L, new Article(6L, "Bitburger", 1.40, 100));
+    result.put(6L, new Article(6L, "Hacker Pschorr", 1.50, 100));
+    result.put(6L, new Article(6L, "Paulaner", 1.49, 100));
     return result;
   }
 
