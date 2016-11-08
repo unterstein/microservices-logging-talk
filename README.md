@@ -26,7 +26,7 @@ The log files of the three services and the web app are synchronized to elastics
 - Go to sources and run this command
 
 ```
-./buildAll.sh && ./run.sh
+./sources/buildAll.sh && ./sources/run.sh
 ```
 
 - Point a browser of your choice to your docker ip on port ```8080``` for http to view the web app or port ```5601``` for http to view kibana. Before using kibana it would be good to generate some log files, using the web app :-)
