@@ -6,11 +6,11 @@ In dieser Session wird exemplarisch gezeigt wie man ELK in seine bestehende Serv
 
 
 ## English
-Most of us build software, which is distributed on multiple services, systems or datacenters. Distributed systems produce distributed log files, but actually we need a centralized API to monitor and search this log files. The stack with elasticsearch, logstash and kibana (ELK) is well accepted to solve these issues and offers good starting point for our architecture.We demo in this session how to integrate the ELK stack to your existing service architecture to achieve the best monitoring experience of your application. We will sync different kinds of logs to elasticsearch and show some tricks how to enable service comprehensive semantics and traceability. Additionally we show how to build dashboards for different stakeholders (Sales, Marketing, Ops, Devs, …). But the best part of it: Our services will not recognize the new logging infrastructure :-)
+Most of us build software, which is distributed on multiple services, systems or datacenters. Distributed systems produce distributed log files, but actually we need a centralized API to monitor and search this log files. The stack with elasticsearch, logstash and kibana (ELK) is well accepted to solve these issues and offers good starting point for our architecture.We demo in this session how to integrate the ELK stack to your existing service architecture to achieve the best monitoring experience of your application. We will sync different kinds of logs to elasticsearch and show some tricks how to enable service comprehensiveensive semantics and traceability. Additionally we show how to build dashboards for different stakeholders (Sales, Marketing, Ops, Devs, …). But the best part of it: Our services will not recognize the new logging infrastructure :-)
 
 # Talk
 
-To see the presentation, just open the pdf file in the presentation folder or go to https://speakerdeck.com/unterstein/logging-in-the-era-of-microservices
+To see the presentation, just open the pdf file in the presentation folder or go to https://speakerdeck.com/unterstein/logging-in-the-era-of-microservices-wjax-2016
 
 # What is in this demo?
 - Three services, bundled together with docker-compose
