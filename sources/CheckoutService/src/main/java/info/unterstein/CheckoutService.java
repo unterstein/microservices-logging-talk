@@ -44,6 +44,7 @@ public class CheckoutService extends Jooby {
 
       // get basket and remove this one
       HttpDelete delete = new HttpDelete("http://basketservice:8082/basket/");
+      delete.setHeader("X-Request-Id", ServiceCommons.getRequestId(req));
       delete.setHeader("X-Session-Id", ServiceCommons.getSessionId(req));
       CloseableHttpResponse deleteResponse = client.execute(delete);
       CheckoutBasket checkoutBasket = gson.fromJson(new InputStreamReader(deleteResponse.getEntity().getContent()), CheckoutBasket.class);
